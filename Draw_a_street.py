@@ -85,13 +85,7 @@ class Street:
         self.light()
 
     def get_str(self):
-        res_str = ""
-        for stg in self.build_list:
-            if stg == self.build_list[-1]:
-                res_str += "".join(stg)
-            else:
-                res_str += "".join(stg) + "\n"
-        return res_str
+        return "\n".join(map("".join, self.build_list))
 
 
 # test
