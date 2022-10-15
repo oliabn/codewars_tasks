@@ -10,17 +10,19 @@ est_subsets([1, 2, 3, 4]) = 15
 """
 
 from math import comb
+
+
 # comb(n, k) - Find the total number of possibilities to choose k things from n items
 
 
 def est_subsets(arr):
     arr = set(arr)
     n = len(arr)
-    nCk = 0                         # Combinations k things from n items
+    nCk = 0                     # Combinations k things from n items
     for k in range(1, n + 1):
         nCk += comb(n, k)
     return nCk
 
 
 # test
-print(est_subsets([1, 2, 3, 4]))        # expected resalt 15
+print(est_subsets([1, 2, 3, 4]))  # expected result: 15
